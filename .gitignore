@@ -1,0 +1,12 @@
+
+*.dll
+*.exe
+*.json
+*.v2
+*.pdb
+src/.vs/src/v17/.suo
+*.cache
+*.targets
+*.props
+*.editorconfig
+*.CopyComplete
