@@ -26,6 +26,16 @@ Divide | `/`
 // Your note here
 ```
 These lines are not read by the parser
+
+## Import
+```py
+import IMPORT_TYPE DIRECTORY
+```
+#### Import Types:
+`local` -> File in your project<br>
+`thirdParty` -> File from the web<br>
+`global` -> File from different directory<br>
+
 ## `Main` Function
 ```c#
 namespace app.net.com
@@ -86,6 +96,9 @@ console.out.printLine(STRING);
 set x = VALUE;
 ```
 `set` will automaticaly assign a variable type based on the value. Note: This is a non static type.
+```c#
+TYPE x = VALUE;
+```
 
 Name | Type
 -----|-----
