@@ -82,6 +82,23 @@ namespace PolyJuka.Language
                         if(type == VariableType.STRING)
                         {
 
+                            // NEEDS FIXING
+
+
+                            int startPoint = index + 2;
+                            int cI = 0;
+                            string res = String.Empty;
+                            foreach(var x in dataArray)
+                            {
+                                cI = startPoint++;
+                                if (!dataArray[cI].Contains('"'))
+                                {
+                                    res = res + x;
+                                }
+                            }
+                            Console.WriteLine(res);
+
+
                         }
                         Console.WriteLine("Setting " + dataArray[index] + " to " + dataArray[index+2] + " type: " + ValuateType(dataArray[index+2]));
                         MemoryStream memStream = new MemoryStream();
