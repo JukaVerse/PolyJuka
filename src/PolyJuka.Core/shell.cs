@@ -4,8 +4,11 @@ namespace PolyJuka.Core
 {
     public class PolyJuka
     {
+        public static List<string> langData = new List<string>();
+        public static List<string> parsedData = new List<string>();
         public class Shell
         {
+
             public static string NewLineBug(int line)
             {
                 var res = string.Empty;
@@ -16,11 +19,29 @@ namespace PolyJuka.Core
                     .ValidationErrorMessage("Parser Error.")
                     );
                 res = lineData;
+                if(lineData != "run();")
+                {
+                    Console.WriteLine("Not ran");
+                    langData.Add(lineData);
+                    foreach (var x in langData)
+                    {
+                        Console.Write(x);
+                    }
+                }
                 if(lineData=="run();")
                 {
+                    List<string> ParsedLineLocal = new List<string>();
                     line = 0;
-
                     AnsiConsole.Write(new Rule("\n\n[green bold]Output[/]\n\n").LeftAligned().RoundedBorder().Border(border: BoxBorder.Double));
+                    foreach(var x in langData)
+                    {
+                        ParsedLineLocal = x.Split(" ").ToList();
+                        foreach(var y in ParsedLineLocal)
+                        {
+                            parsedData.Add(y);
+                        }
+                    }
+                        Language.Lexer.lexer(parsedData);
                     
                 }
                 if (lineData == "exit();")
