@@ -10,3 +10,6 @@ src/.vs/src/v17/.suo
 *.props
 *.editorconfig
 *.CopyComplete
+*.lock
+*.vsidx
+*.v1

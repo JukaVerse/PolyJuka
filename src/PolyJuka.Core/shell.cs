@@ -19,11 +19,11 @@ namespace PolyJuka.Core
                     .ValidationErrorMessage("Parser Error.")
                     );
                 res = lineData;
-                if(lineData != "run();")
+                if(lineData != "run()")
                 {
                     langData.Add(lineData);
                 }
-                if(lineData=="run();")
+                if(lineData=="run()")
                 {
                     List<string> ParsedLineLocal = new List<string>();
                     line = 0;
@@ -40,7 +40,7 @@ namespace PolyJuka.Core
                     Environment.Exit(0);
                     
                 }
-                if (lineData == "exit();")
+                if (lineData == "exit()")
                 {
                     AnsiConsole.Write(new Markup("[bold red]Terminating interactive shell...[/]"));
                     Environment.Exit(0);
@@ -50,9 +50,9 @@ namespace PolyJuka.Core
             public static void New()
             {
                 AnsiConsole.Write(new Markup("\n[grey23 dim]PolyJuka interactive command shell - v0.0.001[/]" +
-                    "\n[grey23 dim]You can use \"[/][grey23 underline bold]exit();" +
+                    "\n[grey23 dim]You can use \"[/][grey23 underline bold]exit()" +
                     "[/][grey23 dim]\" to quit the proccess or \"[/]" +
-                    "[grey23 underline bold]run();[/][grey23 dim]\" to execute[/]\n"));
+                    "[grey23 underline bold]run()[/][grey23 dim]\" to execute[/]\n"));
 
                 int line = 1;
                 var lineData = NewLineBug(line);
