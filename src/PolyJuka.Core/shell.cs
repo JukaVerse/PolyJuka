@@ -21,12 +21,7 @@ namespace PolyJuka.Core
                 res = lineData;
                 if(lineData != "run();")
                 {
-                    Console.WriteLine("Not ran");
                     langData.Add(lineData);
-                    foreach (var x in langData)
-                    {
-                        Console.Write(x);
-                    }
                 }
                 if(lineData=="run();")
                 {
@@ -42,6 +37,7 @@ namespace PolyJuka.Core
                         }
                     }
                         Language.Lexer.lexer(parsedData);
+                    Environment.Exit(0);
                     
                 }
                 if (lineData == "exit();")

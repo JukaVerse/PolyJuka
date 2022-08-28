@@ -8,6 +8,7 @@ namespace PolyJuka.Parser
 {
     public class Parser
     {
+
         public static string Parse(string data)
         {
             return data.Split(" ").ToString();
